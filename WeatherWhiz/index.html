@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="bbD1sH8edTTj2OYTZFOhX0T3MvSLZCXlNXmfcw5LJxI" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>WeatherWhiz</title>
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center vh-100"
+    >
+      <div class="cards">
+        <div class="card-bodys">
+          <div class="row search-bar mb-4">
+            <div class="col-8 align-self-start searcher">
+              <form class="inputCity" action="">
+                  <input autocomplete="off"
+                    type="text"
+                    id="locationInput"
+                    placeholder=""
+                    required
+                    class="form-control searchInput"
+                  />
+                  <div class="flotingPlaceHolder snByac" aria-hidden="true">
+                    Enter Location
+                  </div> <ul id="suggestion-box"></ul>
+                              </div>
+                              <div class="col-2">
+                  <button id="button"
+                    
+                    class="btn btn-warning searchBtn"
+                    type="submit"
+                  >
+                    Search
+                  </button>
+                              </div>
+              </form>
+          </div>
+          <div class="weather-details row">
+            <div class="city-name font-weight-bold mb-3 align-self-start col">
+              <h1>Coimbatore</h1>
+              <div
+                class="weatherTemp"
+                style="justify-content: flex-end !important"
+              >
+                <div class="current-temp d-inline-flex p-2">
+                  <strong class="temp">15</strong>
+                  <span class="celcius">°C |</span
+                  ><span class="foreign linked"> °F</span>
+                </div>
+                <div class="weatherIcon">
+                  <img
+                    class="weather-image"
+                    width="100px"
+                    src="https://pics.clipartpng.com/Clouds_Weather_Icon_PNG_Clip_Art-1508.png"
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="currentDateWather">
+                <ul>
+                  
+                  <li class="weatherDescription">
+                    <span><small id="description" >broken clouds</small></span>
+                  </li>
+                  <li>
+                    <span> <smaill class="lastUpdate">Last updated:</smaill></span>
+                  </li>
+                  <li><small class="currentDate">Sunday 12:28</small></li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="weather display-4 mb-5 float-end col col-lg-6 col-md-6 col-sm-8"
+            >
+              <div>Humidity: <strong class="humidity"></strong></div>
+              <div>Wind: <strong class="windSpeed">5.14</strong><small class="speedUnit">km/h</small></div>
+              <div>Min: <strong class="minTemp">87%</strong><span class="celcius">°C |</span
+                  ><span class="foreign linked"> °F</span></div>
+              <div>Max: <strong class="maxTemp">5.14km/h</strong><span class="celcius">°C |</span
+                  ><span class="foreign linked"> °F</span></div>
+            </div>
+          </div>
+<div class="weather-forecast mb-4">
+            <div class="row">
+              <div class="col forecastDaily">
+                <div class="WeatherForecastPreview">
+                  <div class="forecast-time"></div>
+                  <div class="image-container"><img  class="future-image" ></div>
+                  <div class="forecast-temperature">
+                    <div class="forecast-temperature-max"></div
+                    ><div class="forecast-temperature-min"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col forecastDaily">
+                <div class="WeatherForecastPreview">
+                  <div class="forecast-time"></div>
+                  <div class="image-container"><img  class="future-image" ></div>
+                  <div class="forecast-temperature">
+                    <div class="forecast-temperature-max"></div
+                    ><div class="forecast-temperature-min"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col forecastDaily">
+                <div class="WeatherForecastPreview">
+                  <div class="forecast-time"></div>
+                  <div class="image-container"><img  class="future-image" ></div>
+                  <div class="forecast-temperature">
+                    <div class="forecast-temperature-max"></div
+                    ><div class="forecast-temperature-min"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col forecastDaily">
+                <div class="WeatherForecastPreview">
+                  <div class="forecast-time"></div>
+                  <div class="image-container"><img  class="future-image" ></div>
+                  <div class="forecast-temperature">
+                    <div class="forecast-temperature-max"></div
+                    ><div class="forecast-temperature-min"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col forecastDaily">
+                <div class="WeatherForecastPreview">
+                  <div class="forecast-time"></div>
+                  <div class="image-container"><img  class="future-image" ></div>
+                  <div class="forecast-temperature">
+                    <div class="forecast-temperature-max"></div
+                    ><div class="forecast-temperature-min"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col forecastDaily">
+                <div class="WeatherForecastPreview">
+                  <div class="forecast-time"></div>
+                  <div class="image-container"><img  class="future-image" ></div>
+                  <div class="forecast-temperature">
+                    <div class="forecast-temperature-max"></div
+                    ><div class="forecast-temperature-min"></div>
+                  </div>
+                </div>
+              </div>
+               <div class="col forecastDaily">
+                <div class="WeatherForecastPreview">
+                  <div class="forecast-time"></div>
+                  <div class="image-container"><img  class="future-image" ></div>
+                  <div class="forecast-temperature">
+                    <div class="forecast-temperature-max"></div
+                    ><div class="forecast-temperature-min"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Repeat the above section for 7 days -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/script.js"></script>
+    
+  </body>
+</html>

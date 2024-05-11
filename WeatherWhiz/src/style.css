@@ -1,0 +1,209 @@
+.container {
+  /* background-color: skyblue;
+ */
+  padding: 20px;
+  font-family: "Your Chosen Font", sans-serif;
+  color: white;
+  margin-top: 60px;
+  height: 100% !important;
+}
+
+.search-bar {
+  margin: 20px auto;
+}
+
+.city-name {
+  /*font-size: calc(12px + 1vw);*/
+  font-weight: bold;
+}
+.weather-image {
+  filter: contrast(120%);
+}
+.currentDateWather {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.weather {
+  font-size: 20px;
+  font-weight: bolder;
+  direction: rtl;
+  text-align: center;
+  padding-top: 45px;
+  line-height: 35px;
+}
+.current-temp {
+  font-size: 69px;
+}
+.temp {
+  line-height: 45px;
+}
+.linked {
+  color: #0d6efd;
+  cursor: pointer;
+  font-weight: 100;
+  font-size: 13px !important;
+}
+.lastUpdate {
+  font-size: 10px;
+}
+
+ul#suggestion-box {
+  display: none;
+  max-height: 400px;
+  overflow: scroll;
+}
+.suggestions {
+  display: block !important;
+  opacity: 0.5;
+  padding-left: 17px;
+}
+li.suggestion-item {
+  color: blue;
+  list-style: none;
+}
+li.suggestion-item:hover {
+  color: white;
+  background-color: blue;
+}
+.celcius,
+.foreign {
+  font-size: 16px;
+  font-weight: bolder;
+}
+#weatherInfo {
+  margin-top: 20px;
+}
+.cards {
+  /*margin-top: 253px !important;*/
+  /*background-color: #87ceeb;*/
+  background-image: url("/img/blue-sky-with-clouds.jpg");
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-width: 2px;
+  border-color: rgb(207, 200, 200);
+  border-style: ridge;
+  outline-color: #3704ff29;
+  border-radius: 16px;
+  outline-style: groove;
+  text-shadow: 1px 1px 1px black;
+  max-width: 792px;
+  width: 100%;
+}
+.searchInput {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-width: 2px;
+  border-color: rgb(207, 200, 200);
+  border-style: ridge;
+  outline-color: #3704ff29;
+}
+
+.card-bodys {
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  padding: 40px;
+}
+.city-name ul {
+  list-style: none;
+}
+
+.weatherDescription:first-letter {
+  text-transform: capitalize;
+}
+.forecastDaily {
+  font-size: calc(8px + 1vw);
+  padding-top: 15px;
+  padding-top: 15px;
+  margin-top: 10px;
+}
+.weather-forecast {
+  text-align: center;
+}
+.searcher {
+  position: relative;
+  z-index: 1;
+  background: #fffffffa;
+  padding-right: 0;
+  padding-left: 0;
+  /*width: 20.5em;*/
+  border-radius: 8px;
+}
+.searchInput {
+  background: transparent;
+}
+.flotingPlaceHolder {
+  position: absolute;
+  left: 18px;
+  top: 8px;
+  background: white;
+  padding: 0 7px;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 300ms;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #00000049;
+  z-index: -10;
+}
+.searchInput:focus ~ .flotingPlaceHolder,
+.searchInput:valid ~ .flotingPlaceHolder {
+  transform: scale(0.96) translateX(-16px) translateY(-32px);
+  color: white;
+  font-weight: bolder;
+  font-size: 15px;
+  z-index: 2;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 -4px 0 0.11rem rgba(13, 110, 253, 0.25);
+  border-color: #86b7fe;
+  outline: 0;
+
+  border-left-color: #86b7fe0f;
+  border-left-style: ridge;
+  border-left-width: 2.8px;
+  border-right-color: #86b7fe0f;
+  border-right-style: ridge;
+  border-right-width: 2.8px;
+  border-top-color: #86b7fe0f;
+  border-top-style: ridge;
+  border-top-width: 2.8px;
+  border-bottom: none;
+
+  background-color: #87ceeb;
+}
+.searchInput:focus ~ .flotingPlaceHolder::after {
+  content: ":";
+}
+.searchBtn {
+  border-style: groove;
+  border: greenyellow;
+  border-width: 1px;
+}
+.col.forecastDaily:first-child {
+  display: none;
+}
+.forecast-temperature-max::after,
+.forecast-temperature-min::after {
+  content: "°C";
+  font-size: calc(4px + 0.4vw);
+  position: relative;
+  top: -0.4vw;
+}
+.forecast-time {
+  font-weight: bolder;
+  font-stretch: condensed;
+  font-family: system-ui;
+}
+.image-container {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  text-align: center;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px rgb(102, 0, 161);
+}
+footer a {
+  color: black;
+  text-shadow: none;
+}
