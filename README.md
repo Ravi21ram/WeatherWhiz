@@ -12,4 +12,5 @@ WeatherWhiz is your go-to weather forecasting app, delivering accurate predictio
 
 Start using WeatherWhiz today and stay ahead of the weather!
 
+![Uploading image.png…]()
 
